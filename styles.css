@@ -39,15 +39,36 @@ h1, h2, h3 {
 }
 
 /* Styles for witch-house-keyboard.html */
-.container {
+.content-container {
     display: flex;
-    flex-wrap: wrap;
     gap: 20px;
     margin-bottom: 30px;
 }
 
-.player, .lyrics {
-    flex: 1 1 300px;
+.left-column, .right-column {
+    flex: 1;
+}
+
+.featured-image {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.spiral-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.spiral-image:hover {
+    transform: scale(1.05);
+}
+
+audio {
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .lyrics {
@@ -55,6 +76,8 @@ h1, h2, h3 {
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 5px;
+    font-size: 0.9em;
+    line-height: 1.4;
 }
 
 .analysis {
@@ -80,8 +103,12 @@ a:hover {
 }
 
 /* Responsive adjustments */
-@media (max-width: 600px) {
-    .container {
+@media (max-width: 768px) {
+    .content-container {
         flex-direction: column;
+    }
+    
+    .left-column, .right-column {
+        width: 100%;
     }
 }
