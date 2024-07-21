@@ -64,14 +64,20 @@ h1, h2, h3 {
     color: #3498db;
 }
 
-/* Styles for individual song pages */
+/* Update styles for individual song pages */
 .content-container {
     display: flex;
-    gap: 20px;
+    gap: 40px;
     margin-bottom: 30px;
+    align-items: flex-start;
 }
 
-.left-column, .right-column {
+.left-column {
+    flex: 0 0 30%; /* Adjust this value to change the width of the left column */
+    max-width: 300px; /* Adjust this value to set a maximum width for the image */
+}
+
+.right-column {
     flex: 1;
 }
 
@@ -88,53 +94,18 @@ h1, h2, h3 {
     transition: transform 0.3s ease;
 }
 
-.spiral-image:hover {
-    transform: scale(1.05);
-}
-
 audio {
     width: 100%;
     margin-bottom: 20px;
 }
 
-.lyrics {
-    white-space: pre-wrap;
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 5px;
-    font-size: 0.9em;
-    line-height: 1.4;
-}
-
-.analysis {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-
-/* Shared styles for links, etc. */
-a {
-    color: #3498db;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-.back-link {
-    display: inline-block;
-    margin-bottom: 1rem;
-}
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .container, .content-container {
+    .content-container {
         flex-direction: column;
     }
     
-    .image-column, .song-list-column, .left-column, .right-column {
+    .left-column, .right-column {
         width: 100%;
         max-width: none;
     }
