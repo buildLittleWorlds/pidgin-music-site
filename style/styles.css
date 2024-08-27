@@ -28,9 +28,10 @@ h1, h2, h3 {
     align-items: flex-start;
 }
 
+/* Increased size for the image column */
 .image-column {
-    flex: 0 0 40%;
-    max-width: 400px;
+    flex: 0 0 50%; /* Increased from 40% to 50% */
+    max-width: 500px; /* Increased from 400px to 500px */
 }
 
 .song-list-column {
@@ -72,9 +73,10 @@ h1, h2, h3 {
     align-items: flex-start;
 }
 
+/* Increased size for the left column containing the image */
 .left-column {
-    flex: 0 0 30%; /* Adjust this value to change the width of the left column */
-    max-width: 300px; /* Adjust this value to set a maximum width for the image */
+    flex: 0 0 40%; /* Increased from 30% to 40% */
+    max-width: 400px; /* Increased from 300px to 400px */
 }
 
 .right-column {
@@ -86,8 +88,10 @@ h1, h2, h3 {
     width: 100%;
 }
 
+/* Updated styles for the spiral image */
 .spiral-image {
     width: 100%;
+    min-width: 400px; /* Added to ensure the image is at least this wide */
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -104,9 +108,14 @@ audio {
     .content-container {
         flex-direction: column;
     }
-    
+
     .left-column, .right-column {
         width: 100%;
         max-width: none;
+    }
+
+    /* Ensure the image doesn't overflow on small screens */
+    .spiral-image {
+        min-width: auto;
     }
 }
