@@ -16,7 +16,11 @@ header {
     margin-bottom: 2rem;
 }
 
-h1, h2, h3 {
+h1 {
+    color: #ecf0f1; /* Change this to match the header's text color */
+}
+
+h2, h3 {
     color: #2c3e50;
 }
 
